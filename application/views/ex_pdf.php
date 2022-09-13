@@ -23,9 +23,9 @@ $html = "
 					</thead>
 					<tbody>";
 
-foreach ($query as $rs) {
+foreach ($query as $row => $rs) {
 	$html .= '<tr>
-	<td> ' . $rs->id . ' </td>
+	<td> ' . $row = $row + 1 . ' </td>
 	<td>' . $rs->name . '</td>
 	<td>' . $rs->email . '</td>
 	<td>' . $rs->phone . '</td>
