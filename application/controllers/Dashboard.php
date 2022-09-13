@@ -42,7 +42,7 @@ class Dashboard extends CI_Controller
 	{
 
 		$this->db->delete('customer', array('id' => $id)); // delete data by calling cus model
-		redirect('', 'refresh');
+		redirect(base_url(), 'refresh');
 		// echo ' <script> location.href = "https://myinterviewexercise.000webhostapp.com/"; </script>';
 	}
 

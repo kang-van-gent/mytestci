@@ -35,7 +35,8 @@ class Login extends CI_Controller
 					'age' => $result->age,
 				);
 				$this->session->set_userdata('member', $sess); //set session and refresh page
-				redirect(base_url(), 'refresh');
+				// redirect(base_url(), 'refresh');
+				echo ' <script> location.reload(); </script>';
 			} else {
 
 				echo '<script> alert("Incorrect username or password, please try again.") </script>';
