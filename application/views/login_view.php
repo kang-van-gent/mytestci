@@ -29,6 +29,10 @@ a {
     color: #000;
 
 }
+
+.fr {
+    color: red;
+}
 </style>
 
 
@@ -51,7 +55,8 @@ a {
                     <div class="col-sm-10">
                         <input type="text" name="username" class="form-control" id="username" placeholder="username"
                             value="<?php echo set_value('username'); ?>">
-                        <?php echo form_error('username'); ?>
+                        <span class="fr"><?php echo form_error('username'); ?></span>
+
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -59,7 +64,8 @@ a {
                     <div class="col-sm-10">
                         <input type="password" name="password" class="form-control" id="inputPassword"
                             placeholder="password" value="<?php echo set_value('password'); ?>">
-                        <?php echo form_error('password'); ?>
+                        <span class="fr"><?php echo form_error('password'); ?></span>
+
                     </div>
                 </div>
 
@@ -70,6 +76,7 @@ a {
                 </div>
                 </form>
             </div>
+
        
  </div>
     </div>

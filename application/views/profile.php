@@ -13,6 +13,12 @@
     <meta name="robots" content="noindex,nofollow">
     <title>Add customer</title>
 
+    <style>
+    .fr {
+        color: red;
+    }
+    </style>
+
 
 
 </head>
@@ -148,7 +154,9 @@
                                                     value="<?php echo set_value('username'); ?>">
 
                                             </div>
-                                            <?php echo form_error('username'); ?>
+                                            <span class="fr"><?php echo form_error('username'); ?></span>
+
+
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="example-email" class="col-md-12 p-0">Email</label>
@@ -156,16 +164,19 @@
                                                 <input type="email" name="email" class="form-control p-0 border-0"
                                                     value="<?php echo set_value('email'); ?>" id="example-email">
                                             </div>
-                                            <?php echo form_error('email'); ?>
+                                            <span class="fr"><?php echo form_error('email'); ?></span>
+
                                         </div>
 
                                         <div class="form-group mb-4">
                                             <label class="col-md-12 p-0">Phone No</label>
                                             <div class="col-md-12 border-bottom p-0">
                                                 <input type="text" name="phone" class="form-control p-0 border-0"
+                                                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10"
                                                     value="<?php echo set_value('phone'); ?>">
                                             </div>
-                                            <?php echo form_error('phone'); ?>
+                                            <span class="fr"><?php echo form_error('phone'); ?></span>
+
                                         </div>
                                         <div class="form-group mb-4">
                                             <label class="col-md-12 p-0">Gender</label>
@@ -214,8 +225,10 @@
                     href="https://www.wrappixel.com/">wrappixel.com</a>
             </footer>
             <!-- ============================================================== -->
-       
-     <!-- End footer -->
+
+
+
+            <!-- End footer -->
             <!-- ============================================================== -->
         </div>
 

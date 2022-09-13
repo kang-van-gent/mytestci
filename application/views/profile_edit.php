@@ -12,6 +12,11 @@
         content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
     <title>Edit customer</title>
+    <style>
+    .fr {
+        color: red;
+    }
+    </style>
 
 
 </head>
@@ -146,7 +151,8 @@
                                                 <input type="text" class="form-control p-0 border-0" name="username"
                                                     value="<?php echo $query->name ?><?php echo set_value('username'); ?>"
                                                     require>
-                                                <?php echo form_error('username'); ?>
+                                                <span class="fr"><?php echo form_error('username'); ?></span>
+
                                             </div>
                                         </div>
                                         <div class="form-group mb-4">
@@ -156,7 +162,8 @@
                                                     id="example-email"
                                                     value="<?php echo $query->email ?><?php echo set_value('email'); ?>"
                                                     require>
-                                                <?php echo form_error('email'); ?>
+                                                <span class="fr"><?php echo form_error('email'); ?></span>
+
                                             </div>
                                         </div>
 
@@ -165,8 +172,9 @@
                                             <div class="col-md-12 border-bottom p-0">
                                                 <input type="text" class="form-control p-0 border-0" name="phone"
                                                     value="<?php echo $query->phone ?><?php echo set_value('phone'); ?>"
-                                                    require>
-                                                <?php echo form_error('phone'); ?>
+                                                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10" require>
+                                                <span class="fr"><?php echo form_error('phone'); ?></span>
+
                                             </div>
                                         </div>
                                         <div class="form-group mb-4">
@@ -229,6 +237,8 @@
 
             <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
                     href="https://www.wrappixel.com/">wrappixel.com</a>
+
+
        
      </footer>
             <!-- ============================================================== -->

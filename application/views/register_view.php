@@ -28,6 +28,10 @@ a {
     color: #000;
 
 }
+
+.fr {
+    color: red;
+}
 </style>
 
 
@@ -48,7 +52,8 @@ a {
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="username" placeholder="username" name="username"
                             value="<?php echo set_value('username'); ?>">
-                        <?php echo form_error('username'); ?>
+                        <sapn class="fr"><?php echo form_error('username'); ?></sapn>
+
                     </div>
 
                 </div>
@@ -58,7 +63,8 @@ a {
                     <div class="col-sm-9">
                         <input type="email" class="form-control" id="email" placeholder="xxx@xxx.com" name="email"
                             value="<?php echo set_value('email'); ?>">
-                        <?php echo form_error('email'); ?>
+                        <sapn class="fr"><?php echo form_error('email'); ?></sapn>
+
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -66,7 +72,8 @@ a {
                     <div class="col-sm-4">
                         <input type="number" class="form-control" id="age" placeholder="0" name="age"
                             value="<?php echo set_value('age'); ?>">
-                        <?php echo form_error('age'); ?>
+                        <sapn class="fr"><?php echo form_error('age'); ?></sapn>
+
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -79,15 +86,17 @@ a {
                             <option value="female">female</option>
                             <option value="etc">etc</option>
                         </select>
-                        <?php echo form_error('gender'); ?>
+                        <sapn class="fr"><?php echo form_error('gender'); ?></sapn>
+
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="phone" class="col-sm-3 col-form-label">Phone number</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="phone" placeholder="0xxxxxxxxx" name="phone"
-                            value="<?php echo set_value('phone'); ?>">
-                        <?php echo form_error('phone'); ?>
+                        <input type="tel" class="form-control" id="phone" placeholder="0xxxxxxxxx" name="phone"
+                            value="<?php echo set_value('phone'); ?>" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10">
+                        <sapn class="fr"> <?php echo form_error('phone'); ?></sapn>
+
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -95,7 +104,8 @@ a {
                     <div class="col-sm-9">
                         <input type="password" class="form-control" id="inputPassword" placeholder="password"
                             name="password" value="<?php echo set_value('password'); ?>">
-                        <?php echo form_error('password'); ?>
+                        <sapn class="fr"><?php echo form_error('password'); ?></sapn>
+
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -103,7 +113,8 @@ a {
                     <div class="col-sm-9">
                         <input type="password" class="form-control" id="inputPassword"
                             value="<?php echo set_value('passconf'); ?>" placeholder="confirm password" name="passconf">
-                        <?php echo form_error('passconf'); ?>
+                        <sapn class="fr"><?php echo form_error('passconf'); ?></sapn>
+
                     </div>
                 </div>
 
@@ -119,7 +130,8 @@ a {
             </div>
 
         </div>
-    </d iv>
+    </d
+ iv>
 
 
 
